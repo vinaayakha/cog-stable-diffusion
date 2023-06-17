@@ -33,7 +33,7 @@ class Predictor(BasePredictor):
         )
         self.pipe = StableDiffusionPipeline.from_pretrained(
             MODEL_ID,
-            safety_checker=safety_checker,
+            # safety_checker=safety_checker,
             cache_dir=MODEL_CACHE,
             local_files_only=True,
         ).to("cuda")
